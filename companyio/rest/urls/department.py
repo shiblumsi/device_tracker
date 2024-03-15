@@ -1,5 +1,5 @@
 from django.urls import path
-from deviceio.rest.views import department
+from companyio.rest.views import department
 
 app_name = 'department'
 

@@ -1,7 +1,8 @@
 from rest_framework.test import APITestCase
 from django.urls import reverse
-from accountio.models import CompanyProfile, CustomUser
-from deviceio.models import Department
+from accountio.models import  CustomUser
+from companyio.models import CompanyProfile, Department
+
 
 
 

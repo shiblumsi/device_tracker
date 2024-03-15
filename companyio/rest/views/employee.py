@@ -1,9 +1,8 @@
 from django.shortcuts import get_object_or_404
 from rest_framework.generics import CreateAPIView, ListAPIView, RetrieveUpdateDestroyAPIView
-from accountio.models import CompanyProfile
-from deviceio.models import Employee
-from deviceio.rest.permissions import IsCompanyEmployee
-from deviceio.rest.serializers.employee import EmployeeSerializer
+from companyio.models import Employee, CompanyProfile
+from companyio.rest.permissions import IsCompanyEmployee
+from companyio.rest.serializers.employee import EmployeeSerializer
 
 
 class EmployeeCreateView(CreateAPIView):

@@ -1,9 +1,8 @@
 from django.shortcuts import get_object_or_404
 from rest_framework.generics import CreateAPIView, ListAPIView, RetrieveAPIView, UpdateAPIView, DestroyAPIView
-from deviceio.rest.permissions import IsCompanyDepartment
-from deviceio.models import Department
-from accountio.models import CompanyProfile
-from deviceio.rest.serializers.department import DepartmentSerializer
+from companyio.rest.permissions import IsCompanyDepartment
+from companyio.models import CompanyProfile, Department
+from companyio.rest.serializers.department import DepartmentSerializer
 
 class DepartmentCreateView(CreateAPIView):
     queryset = Department.objects.filter()

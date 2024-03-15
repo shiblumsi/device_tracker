@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from accountio.models import CompanyProfile
+from companyio.models import CompanyProfile
 from deviceio.models import Device
 
 

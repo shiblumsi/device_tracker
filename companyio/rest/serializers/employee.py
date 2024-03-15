@@ -1,6 +1,5 @@
 from rest_framework import serializers
-from deviceio.models import Department, Employee
-from accountio.models import CompanyProfile
+from companyio.models import CompanyProfile, Department, Employee
 
 class EmployeeSerializer(serializers.ModelSerializer):
 

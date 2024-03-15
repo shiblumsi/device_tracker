@@ -5,8 +5,8 @@ from rest_framework.response import Response
 from rest_framework import status
 from drf_spectacular.utils import extend_schema
 
-from accountio.models import CompanyProfile
-from accountio.rest.serializers.company import CompanyProfileSerializer
+from companyio.models import CompanyProfile
+from companyio.rest.serializers.company import CompanyProfileSerializer
 
 class CompanyProfileCreateView(CreateAPIView):
     queryset = CompanyProfile.objects.all()

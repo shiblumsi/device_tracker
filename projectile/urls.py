@@ -22,11 +22,12 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('api/',include('accountio.rest.urls.auth')),
-    path('api/',include('accountio.rest.urls.company')),
+    
+    path('api/',include('companyio.rest.urls.company')),
+    path('api/',include('companyio.rest.urls.department')),
+    path('api/',include('companyio.rest.urls.employee')),
 
 
-    path('api/',include('deviceio.rest.urls.department')),
-    path('api/',include('deviceio.rest.urls.employee')),
     path('api/',include('deviceio.rest.urls.device')),
     path('api/',include('deviceio.rest.urls.checkout')),
     path('api/',include('deviceio.rest.urls.return_log')),

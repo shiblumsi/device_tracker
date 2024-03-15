@@ -1,6 +1,6 @@
 from django.shortcuts import get_object_or_404
 from rest_framework.generics import CreateAPIView, ListAPIView, RetrieveUpdateDestroyAPIView
-from accountio.models import CompanyProfile
+from companyio.models import CompanyProfile
 from deviceio.models import Device
 from deviceio.rest.permissions import IsCompanyDevice
 from deviceio.rest.serializers.device import DeviceSerializer

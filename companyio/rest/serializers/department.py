@@ -1,6 +1,5 @@
 from rest_framework import serializers
-from deviceio.models import Department
-from accountio.models import CompanyProfile
+from companyio.models import CompanyProfile, Department
 
 class DepartmentSerializer(serializers.ModelSerializer):
     class Meta:

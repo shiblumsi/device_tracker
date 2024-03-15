@@ -1,6 +1,6 @@
 from django.shortcuts import get_object_or_404
 from rest_framework.generics import CreateAPIView, ListAPIView, RetrieveUpdateDestroyAPIView
-from accountio.models import CompanyProfile
+from companyio.models import CompanyProfile
 from deviceio.models import Checkout
 from deviceio.rest.permissions import IsCompanyCheckout
 from deviceio.rest.serializers.checkout import CheckoutSerializer

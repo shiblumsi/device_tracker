@@ -1,32 +1,7 @@
 from django.db import models
-from accountio.models import CompanyProfile
 from deviceio.choices import DEVICE_STATUS, DEVICE_TYPE, CHECKOUT_STATUS
 from projectile.utils import BaseModelWithUUID
-
-
-class Department(BaseModelWithUUID):
-    name = models.CharField(max_length=255)
-    description = models.TextField(null=True, blank=True)
-    company = models.ForeignKey(CompanyProfile, on_delete=models.CASCADE)
-
-    class Meta:
-        unique_together = ['name', 'company']
-
-    def __str__(self):
-        return f"{self.name} ({self.company.name})"
-
-
-class Employee(BaseModelWithUUID):
-    name = models.CharField(max_length=255)
-    position = models.CharField(max_length=100)
-    email = models.EmailField()
-    phone_number = models.CharField(max_length=20)
-    department = models.ForeignKey(Department, on_delete=models.CASCADE)
-    company = models.ForeignKey(CompanyProfile, on_delete=models.CASCADE)
-
-    def __str__(self):
-        return self.name
-
+from companyio.models import Employee, CompanyProfile
 
 class Device(BaseModelWithUUID):
     name = models.CharField(max_length=255)

@@ -1,5 +1,5 @@
 from django.urls import path
-from accountio.rest.views import company
+from companyio.rest.views import company
 
 app_name = 'company'
 

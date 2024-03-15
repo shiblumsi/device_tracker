@@ -1,7 +1,7 @@
 from rest_framework import serializers
 
-from accountio.models import CompanyProfile
-from deviceio.models import Checkout, Device, Employee
+from companyio.models import CompanyProfile, Employee
+from deviceio.models import Checkout, Device
 
 class CheckoutSerializer(serializers.ModelSerializer):
 
