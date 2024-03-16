@@ -9,9 +9,10 @@ class CheckoutSerializer(serializers.ModelSerializer):
         super().__init__(*args, **kwargs)
         user = self.context['request'].user
         company = CompanyProfile.objects.get(company_user=user)
-        # filter a perticular companies employee
+        # filter a specific companies employee
         self.fields['employee'].queryset = Employee.objects.filter(company=company)
-        # filter only a particular companies available devices
+
+        # filter only a specific companies available devices
         self.fields['device'].queryset = Device.objects.filter(company=company, status='AV')
         
 
