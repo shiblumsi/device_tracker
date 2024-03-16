@@ -9,7 +9,7 @@ from companyio.rest.serializers.employee import EmployeeSerializer, EmployeeDevi
 class EmployeeCreateView(CreateAPIView):
     queryset = Employee.objects.filter()
     serializer_class = EmployeeSerializer
-
+    permission_classes = [IsCompanyEmployee]
 
 class EmployeeListView(ListAPIView):
     queryset = Employee.objects.filter()

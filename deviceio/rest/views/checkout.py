@@ -9,6 +9,7 @@ from deviceio.rest.serializers.checkout import CheckoutSerializer
 class CheckoutCreateView(CreateAPIView):
     queryset = Checkout.objects.filter()
     serializer_class = CheckoutSerializer
+    permission_classes = [IsCompanyCheckout]
 
 
 class CheckoutListView(ListAPIView):
