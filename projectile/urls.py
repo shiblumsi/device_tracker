@@ -31,6 +31,8 @@ urlpatterns = [
     path('api/',include('deviceio.rest.urls.device')),
     path('api/',include('deviceio.rest.urls.checkout')),
     path('api/',include('deviceio.rest.urls.return_log')),
+
+    path('api/',include('subscriptionio.rest.urls.subscriptions')),
     
 
 
