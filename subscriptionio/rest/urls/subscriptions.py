@@ -6,4 +6,5 @@ urlpatterns = [
     path('subscription-plans/<int:pk>/', subscriptions.SubscriptionPlanRetrieveUpdateDestroyAPIView.as_view(), name='subscription-plan-detail'),
 
     path('purchase/', purchase.PurchaseSubscriptionView.as_view(), name='purchase-subscription'),
+    path('purchase/<int:pk>', purchase.PurchaseDetailview.as_view(), name='purchase-detail'),
 ]

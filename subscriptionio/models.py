@@ -16,11 +16,6 @@ class SubscriptionPlan(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     duration = models.IntegerField(choices=DURATION_CHOICES)
 
-    
-    
-
-
-
 
 class Transaction(models.Model):
     company = models.ForeignKey(CompanyProfile, on_delete=models.CASCADE)

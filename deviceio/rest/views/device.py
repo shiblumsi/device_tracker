@@ -40,6 +40,7 @@ class DeviceRetrieveUpdateDestroyView(RetrieveUpdateDestroyAPIView):
 
 class DeviceDetailView(RetrieveAPIView):
     serializer_class = DeviceSerializer
+    permission_classes = [IsCompanyDevice]
 
     def retrieve(self, request, *args, **kwargs):
         uuid = kwargs.get('uuid')
